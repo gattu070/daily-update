@@ -65,7 +65,8 @@
             <label for="disc" class="form-label">Description</label>
             <textarea class="form-control" rows="3" id="disc"></textarea>
         </div>
-        <button type="submit" id="add" onclick="add()" class="btn btn-primary">Add to list</button>
+        <button type="submit" id="add" class="btn btn-primary">Add to list</button>
+        <button class="btn btn-primary" onclick="clrall()">CLEAR ALL</button>
 
         <!-- Table -->
         <div id="items" class="my-4">
@@ -79,7 +80,7 @@
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tbody">
                     <tr>
                         <th scope="row">1</th>
                         <td>React Learning</td>
@@ -92,6 +93,13 @@
             </table>
         </div>
     </div>
+
+    <script>
+        let btn = document.getElementById("add");
+        btn.addEventListener("click", add);
+        update();
+    </script>
+
 </body>
 
 </html>
