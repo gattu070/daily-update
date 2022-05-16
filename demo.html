@@ -1,0 +1,19 @@
+<form class="row g-3 needs-validation" novalidate>
+    <div class="col-md-4">
+      <label for="title" class="form-label">Title</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend">@</span>
+        <input type="text" class="form-control" id="title" aria-describedby="inputGroupPrepend" required>
+        <div class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="disc" class="form-label">Description</label>
+      <textarea type="text" class="form-control" id="disc" required></textarea>
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+  </form>

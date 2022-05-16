@@ -8,7 +8,7 @@ function add() {
         itemJsonArray.push([title, disc]);
         localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
     }
-    
+
     else {
         itemJsonArrayStr = localStorage.getItem('itemsJson');
         itemJsonArray = JSON.parse(itemJsonArrayStr);
@@ -18,13 +18,13 @@ function add() {
     update();
 }
 
-function update(){
+function update() {
 
     if (localStorage.getItem('itemsJson') == null) {
         itemJsonArray = [];
         localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
     }
-    
+
     else {
         itemJsonArrayStr = localStorage.getItem('itemsJson');
         itemJsonArray = JSON.parse(itemJsonArrayStr);
@@ -52,14 +52,16 @@ function del(items) {
     itemJsonArrayStr = localStorage.getItem('itemsJson');
     itemJsonArray = JSON.parse(itemJsonArrayStr);
 
-    itemJsonArray.splice(items , 1);
+    itemJsonArray.splice(items, 1);
     localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
 
     update();
 }
 
-function clrall(){
+function clrall() {
     console.log("Clearing the storage");
     localStorage.clear();
+    document.getElementById("title").value = "";
+    document.getElementById("disc").value = "";
     update();
 }
