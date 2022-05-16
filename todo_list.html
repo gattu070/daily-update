@@ -10,6 +10,32 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
     <script src="todo_build.js"></script>
+    <style>
+        body {
+            background-color: lightgrey;
+        }
+
+        table {
+            table-layout: fixed;
+            word-wrap: break-word;
+        }
+
+        .sr {
+            width: 8%;
+        }
+
+        .act {
+            width: 7%;
+        }
+
+        .tit {
+            width: 41%;
+        }
+
+        .des {
+            width: 44%;
+        }
+    </style>
     <title>TODO LIST</title>
 </head>
 
@@ -54,46 +80,40 @@
         </div>
     </nav>
     <!-- Navbar-End -->
+    <div class="container-fluid">
+        <div class="container my-2">
+            <h2 class="text-center">TODO</h2>
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" placeholder="Enter your title of the task...">
+            </div>
+            <div class="mb-3">
+                <label for="disc" class="form-label">Description</label>
+                <textarea class="form-control desc" rows="3" id="disc"
+                    placeholder="Enter your description of the task..."></textarea>
+            </div>
+            <button type="submit" id="add" class="btn btn-primary">Add to list</button>
+            <button class="btn btn-primary ms-2" onclick="clrall()">Clear All</button>
 
-    <div class="container my-2">
-        <h2 class="text-center">TODO</h2>
-        <div class="mb-3">
-            <label for="title" class="form-label">Title</label>
-            <input type="email" class="form-control" id="title">
+            <!-- Table -->
+            <div id="items" class="my-4">
+                <h3>Todo List Information</h3>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="sr">Sr No.</th>
+                            <th scope="col" class="tit">Title</th>
+                            <th scope="col" class="des">Description</th>
+                            <th scope="col" class="act">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="disc" class="form-label">Description</label>
-            <textarea class="form-control" rows="3" id="disc"></textarea>
-        </div>
-        <button type="submit" id="add" class="btn btn-primary">Add to list</button>
-        <button class="btn btn-primary" onclick="clrall()">CLEAR ALL</button>
 
-        <!-- Table -->
-        <div id="items" class="my-4">
-            <h3>Todo List Information</h3>
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">Sr No.</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Discription</th>
-                        <th scope="col">Action</th>
-                    </tr>
-                </thead>
-                <tbody id="tbody">
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>React Learning</td>
-                        <td>It is a Javascript Library. But used as a Framework...Created a React App</td>
-                        <td>
-                            <button class="btn btn-primary btn-sm" id="del">DELETE</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
     </div>
-
     <script>
         let btn = document.getElementById("add");
         btn.addEventListener("click", add);
