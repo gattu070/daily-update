@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    padding-left: 20px;
+    padding-right: 20px;
+    /* background: transparent; */
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+body {
+    font-family: 'Gothic A1', sans-serif;
+    color: white;
+}
+
+
+/* header {
+            background-image: url("3.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+            color: white;
+            height: 92vh;
+            width: 100%;
+            opacity: 0.7;
+            position: relative;
+        } */
+
+
+/* header::before {
+            content: "";
+            background-image: url("3.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: absolute;
+            opacity: 0.75;
+        } */
+
+header {
+    position: relative;
+    height: 92vh;
+    width: 100%;
+    line-height: 92vh;
+    padding: 10px;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center center;
+    /* display: flex;
+    justify-content: space-between; */
+    /* justify-content: center; */
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0);
+}
+
+.nv-txt {
+    color: white;
+}
+
+.main {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-btn {
+    height: 45px;
+    width: 45px;
+}
+
+
+/* .content h3 {
+    position: relative;
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'Nunito', sans-serif;
+    line-height: 37px;
+} */
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    left: 10%;
+    position: relative;
+    top: 50%;
+    transform: translate(-10%, -50%);
+    flex-wrap: wrap;
+}
+
+#img {
+    height: 35vh;
+    width: 39%;
+    position: relative;
+    /* display: inline; */
+}
+
+.content h3 {
+    /* display: inline-block; */
+    position: relative;
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.content span {
+    position: relative;
+    display: block;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
