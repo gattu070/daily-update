@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="favicon2.png">
+    <link rel="stylesheet" href="Webpage_Css.css">
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+                if (scroll > 1) {
+                    $(".navbar").css({
+                        "background": "rgba(255, 255, 255)",
+                    });
+                    $(".nv-txt").css({
+                        "color": "black",
+                    });
+                } else {
+                    $(".navbar").css("background", "");
+                    $(".nv-txt").css({
+                        "color": "white",
+                    });
+                }
+            });
+        });
+
+        // remove col class
+        $(document).ready(function() {
+            $(window).resize(function() {
+                if ($(window).width() <= 563) {
+                    $("#heading").attr('class', 'col-12');
+                    $("#img").attr('class', 'col-12');
+                } else {
+                    $("#heading").attr('class', 'col-6');
+                    $("#img").attr('class', 'col-6');
+                }
+            });
+        });
+    </script>
+    <title>iCoder</title>
+    <style>
+        @media screen and (max-width:1462px) {
+            #heading h3 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media screen and (max-width:992px) {
+            #heading h3 {
+                font-size: 2.0rem;
+            }
+        }
+        
+        @media screen and (max-width:768px) {
+            #heading h3 {
+                font-size: 1.5rem;
+            }
+            #heading span {
+                font-size: 0.7rem;
+            }
+        }
+        
+        @media screen and (max-width:543px) {
+            #heading h3 {
+                font-size: 1.1rem;
+            }
+            #heading span {
+                font-size: 0.7rem;
+            }
+        }
+        
+        @media screen and (max-width:422px) {
+            #heading h3 {
+                font-size: 0.9rem;
+            }
+            #heading span {
+                font-size: 0.5rem;
+            }
+        }
+        
+        @media screen and (max-width:361px) {
+            #heading h3 {
+                font-size: 0.8rem;
+            }
+            #heading span {
+                font-size: 0.4rem;
+            }
+        }
+        
+        @media screen and (max-width:563px) {
+            .content {
+                display: grid;
+                align-items: center;
+                justify-content: center;
+            }
+            #heading h3 {
+                font-size: 1.5rem;
+            }
+            #heading span {
+                font-size: 0.8rem;
+            }
+            .content {
+                /* width: 100%; */
+                left: 10%;
+                top: 45%;
+                transform: translate(20%, -55%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid main">
+        <nav class="navbar sticky-top navbar-expand-md">
+            <a class="navbar-brand nv-txt" href="#">iCoder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="">
+                <img src="menu1.png" class="menu-btn" alt="">
+            </span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link nv-txt" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nv-txt" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nv-txt" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <header class="header">
+            <div class="container content">
+                <div id="heading" class="col-6">
+                    <h3>Powerful Digital</h3>
+                    <h3>IT Solution Company</h3>
+                    <span class="col-7">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci fuga voluptatum doloribus dignissimos natus itaque soluta quis modi, dolores illum.</span>
+
+                </div>
+                <img src="1.png" id="img" class="col-6" alt="">
+            </div>
+        </header>
+    </div>
+
+    <div class="container">
+        <h1 style="color: green">GeeksforGeeks</h1>
+        <b>How to change navigation bar
+		color in Bootstrap ?</b>
+        <p>The above navigation bar uses a custom class for changing the colors.</p>
+    </div>
+</body>
+
+</html>
